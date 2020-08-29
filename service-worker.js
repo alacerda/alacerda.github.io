@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"8b3cf1c76c393078a1939ab1c01774bb"},{"url":"/posts/maldoc-fud-1/","revision":"21db02111975036c7d43238ba2b0030a"},{"url":"/posts/oneliners/","revision":"23d608d5ca116367fa1789139fea9f2d"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"8b3cf1c76c393078a1939ab1c01774bb"},{"url":"/posts/maldoc-fud-1/","revision":"f0a045a35ff9715d6abef9383ebbeeba"},{"url":"/posts/oneliners/","revision":"23d608d5ca116367fa1789139fea9f2d"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
