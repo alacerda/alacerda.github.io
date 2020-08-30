@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"4f0a7b1a18512268a4e8c4f0d3083ffe"},{"url":"/posts/links-e-referencias/","revision":"a5bff8f761c43d00ddaae0bc54f91127"},{"url":"/posts/maldoc-fud-1/","revision":"f0a045a35ff9715d6abef9383ebbeeba"},{"url":"/posts/oneliners/","revision":"23d608d5ca116367fa1789139fea9f2d"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"d165eca177aa05f257a413b838e89496"},{"url":"/posts/amsi-bypass/","revision":"47f83da8cc1f1f67ec3af9d6743d4256"},{"url":"/posts/links-e-referencias/","revision":"a5bff8f761c43d00ddaae0bc54f91127"},{"url":"/posts/maldoc-fud-1/","revision":"f0a045a35ff9715d6abef9383ebbeeba"},{"url":"/posts/oneliners/","revision":"23d608d5ca116367fa1789139fea9f2d"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
