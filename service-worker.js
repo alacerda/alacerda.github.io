@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"f6322c278279879a7e09dd5ecad15b10"},{"url":"/posts/versao-powershell/","revision":"a909219e727f0a2eb83917fc3de42661"},{"url":"/posts/amsi-bypass/","revision":"47f83da8cc1f1f67ec3af9d6743d4256"},{"url":"/posts/links-e-referencias/","revision":"a5bff8f761c43d00ddaae0bc54f91127"},{"url":"/posts/maldoc-fud-1/","revision":"f0a045a35ff9715d6abef9383ebbeeba"},{"url":"/posts/oneliners/","revision":"23d608d5ca116367fa1789139fea9f2d"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"26e39fb671f85e881d27b8940c0cdbf1"},{"url":"/posts/word-objetos-com/","revision":"77d73970c7f07b62049c53416fc13b15"},{"url":"/posts/versao-powershell/","revision":"a909219e727f0a2eb83917fc3de42661"},{"url":"/posts/amsi-bypass/","revision":"47f83da8cc1f1f67ec3af9d6743d4256"},{"url":"/posts/links-e-referencias/","revision":"a5bff8f761c43d00ddaae0bc54f91127"},{"url":"/posts/maldoc-fud-1/","revision":"f0a045a35ff9715d6abef9383ebbeeba"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
