@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"bd3f00fa611f8d441e5d53f2906027de"},{"url":"/posts/o-formato-elf/","revision":"c104dbcbb3de0291f9fdf4751975df99"},{"url":"/posts/word-objetos-com/","revision":"77d73970c7f07b62049c53416fc13b15"},{"url":"/posts/versao-powershell/","revision":"a909219e727f0a2eb83917fc3de42661"},{"url":"/posts/amsi-bypass/","revision":"47f83da8cc1f1f67ec3af9d6743d4256"},{"url":"/posts/links-e-referencias/","revision":"a5bff8f761c43d00ddaae0bc54f91127"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"10b5ea65aae43bcfd9bc9a0ed838eb97"},{"url":"/posts/tricks-powershell/","revision":"84712b67289ea0edd643a4cc69b74db5"},{"url":"/posts/o-formato-elf-copy/","revision":"c104dbcbb3de0291f9fdf4751975df99"},{"url":"/posts/word-objetos-com/","revision":"77d73970c7f07b62049c53416fc13b15"},{"url":"/posts/versao-powershell/","revision":"a909219e727f0a2eb83917fc3de42661"},{"url":"/posts/amsi-bypass/","revision":"47f83da8cc1f1f67ec3af9d6743d4256"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
