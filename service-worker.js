@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"5d77fcbadbbf8de65d494df6298e76d9"},{"url":"/posts/crto-certified-redteam-operator/","revision":"62b641a9e0f3f60b8594eb661e5a412a"},{"url":"/posts/email-spoof-vs-spf/","revision":"7a0defb53010de4db4faf06b531c6c3c"},{"url":"/posts/internal-pentest-tricks/","revision":"ffbc2d2e3f38a30de2448c772a02f302"},{"url":"/posts/o-formato-elf/","revision":"24d672c564b99e808b34543815c756b7"},{"url":"/posts/word-objetos-com/","revision":"4d9d0f317ad30e35f2405c8e67c33dad"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"5d77fcbadbbf8de65d494df6298e76d9"},{"url":"/posts/crto-certified-redteam-operator/","revision":"1dcd0f1b6368755adc61ff4d3855ed92"},{"url":"/posts/email-spoof-vs-spf/","revision":"7a0defb53010de4db4faf06b531c6c3c"},{"url":"/posts/internal-pentest-tricks/","revision":"ffbc2d2e3f38a30de2448c772a02f302"},{"url":"/posts/o-formato-elf/","revision":"24d672c564b99e808b34543815c756b7"},{"url":"/posts/word-objetos-com/","revision":"4d9d0f317ad30e35f2405c8e67c33dad"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
