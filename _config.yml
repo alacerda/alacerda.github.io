@@ -26,7 +26,7 @@ social:
   links:                                                      # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/alancordeiro/
     - https://github.com/alacerda
-
+    
 
 #--------------------------
 
@@ -35,20 +35,20 @@ social:
 baseurl: ''
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/Sao_Paulo
-#google_analytics:
-#  id: 'UA-!@#@#!@#-2'                                         # Fill with your Google Analytics ID
-#  pv:
-#    # The Google Analytics pageviews switch.
-#    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-#    enabled: false
-#    # the next options only valid when `google_analytics.pv` is enabled.
-#    proxy_url: ''
-#    proxy_endpoint: ''
-#    cache: false  # pv data local cache, good for the users from GFW area.
-#
-#disqus:
-#  comments: true                                               # boolean type, the global switch for posts comments.
-#  shortname: 'alacerda-github-io'                            # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+google_analytics:
+  id: 'UA-!@#@#!@#-2'                                         # Fill with your Google Analytics ID
+  pv:
+    # The Google Analytics pageviews switch.
+    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
+    enabled: false
+    # the next options only valid when `google_analytics.pv` is enabled.
+    proxy_url: ''
+    proxy_endpoint: ''
+    cache: false  # pv data local cache, good for the users from GFW area.
+
+disqus:
+  comments: true                                               # boolean type, the global switch for posts comments.
+  shortname: 'alacerda-github-io'                            # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # Prefer color scheme setting, available values:
 #

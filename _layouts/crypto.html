@@ -1,0 +1,82 @@
+<div class="jekyll-crypto-preview">
+	{{ preview }}
+</div>
+<div class="jekyll-crypto"
+     data-salt="{{ salt }}" data-iv="{{ iv }}"
+     data-iterations="{{ iterations }}" data-auth-data="{{ auth_data }}">
+	<form>
+		<div class="form-row align-items-center">
+			<div class="col-md-10">
+				<label class="sr-only" for="password">Password</label>
+				<div class="input-group mb-2" id="password-wrapper">
+					<input type="password" class="form-control" id="password" placeholder="Type here the hash..."
+					       name="password" autocomplete="off" required>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<button type="submit" class="btn btn-primary btn-outline-primary btn-block mb-2">Submit</button>
+			</div>
+		</div>
+	</form>
+	<span class="cipher-text" style="word-wrap: break-word">
+		{{ cipher_text }}
+	</span>
+</div>
+<script type="text/javascript">
+	const jekyllCrypto = document.querySelectorAll('.jekyll-crypto');
+	const textEncoder = new TextEncoder();
+	const textDecoder = new TextDecoder();
+	const parseBytes = (bytesString) => Uint8Array.from(JSON.parse(bytesString));
+	jekyllCrypto.forEach(container => {
+		container.querySelector('form').addEventListener('submit', event => {
+			event.stopPropagation();
+			event.preventDefault();
+			const password = container.querySelector('input[name=password]').value;
+			const salt = parseBytes(container.dataset.salt);
+			const iv = parseBytes(container.dataset.iv);
+			const iterations = parseInt(container.dataset.iterations);
+			const authData = parseBytes(container.dataset.authData);
+			const cipherText = parseBytes(container.querySelector('.cipher-text').innerText);
+			window.crypto.subtle.importKey("raw", textEncoder.encode(password),
+				{name: "PBKDF2"}, false, ["deriveBits", "deriveKey"]
+			).then(keyMaterial => {
+				window.crypto.subtle.deriveKey(
+					{"name": "PBKDF2", salt: salt, "iterations": iterations, "hash": "SHA-256"},
+					keyMaterial, {"name": "AES-GCM", "length": 256}, false, ["encrypt", "decrypt"]
+				).then(derivedKey => {
+					let callback;
+					let result = document.querySelector(".jekyll-crypto-result");
+					if (!result) {
+						result = document.createElement("div");
+						result.classList.add("jekyll-crypto-result")
+					}
+					result.classList.add("fade-out");
+					window.crypto.subtle.decrypt(
+						{name: "AES-GCM", iv: iv, additionalData: authData, tagLength: 128}, derivedKey, cipherText
+					).then(decrypted => {
+						const preview = document.querySelector('.jekyll-crypto-preview');
+						result.innerHTML = textDecoder.decode(decrypted);
+						callback = () => {
+							result.classList.remove("fade-out");
+							preview.classList.add("fade-out");
+							container.classList.add("fade-out");
+							setTimeout(() => {
+								preview.parentNode.removeChild(preview);
+								container.parentNode.removeChild(container);
+								Toc.init($('#toc'));
+								document.querySelector('#toc-wrapper').classList.remove("unloaded");
+							}, 4 * 1000);
+						};
+					}).catch(() => {
+						result.innerHTML = "Wrong password hash! Do you own It?";
+						callback = () => {
+							result.classList.remove("fade-out");
+						};
+					});
+					container.parentElement.appendChild(result);
+					requestAnimationFrame(() => callback());
+				});
+			});
+		});
+	});
+</script>
