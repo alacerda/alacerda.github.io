@@ -1,4 +1,8 @@
-// service-worker.js
+                        importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
+            workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
+
+            self.__precacheManifest = [{"url":"/index.html","revision":"d41d8cd98f00b204e9800998ecf8427e"}];
+            // service-worker.js
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
@@ -32,3 +36,4 @@ workbox.routing.registerRoute(
 	/^https?:\/\/cdn.staticfile.org/,
 	workbox.strategies.staleWhileRevalidate()
 );
+
