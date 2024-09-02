@@ -1,0 +1,23 @@
+<style>
+    .notes {
+        color: green;
+        background: #DDFFDD;
+        position: relative;
+        margin-top: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .notes::before {
+        padding: 0.15em 0.25em;
+        position: absolute;
+        top: -0.8em;
+        left: -0.8em;
+        color: white;
+        content: 'Nota';
+        background: green;
+    }
+</style>
+<p class="notes">
+    {{ include.content }}
+</p>
