@@ -1,0 +1,116 @@
+/*
+* Mainly scss modules, only imported to `assets/css/main.scss`
+*
+* v2.1
+* https://github.com/cotes2020/jekyll-theme-chirpy
+* © 2020 Cotes Chung
+* MIT Licensed
+*/
+
+/*---------- scss placeholder ---------*/
+
+%tag-hover {
+  color: black !important;
+  background-color: var(--tag-hover);
+  transition: background 0.35s ease-in-out;
+
+  span {
+    color: black !important;
+  }
+}
+
+%table-cell {
+  padding: .35rem .8rem;
+  font-size: 95%;
+}
+
+%link-hover {
+  &:not(.tag):not(.remove-color) {
+    color: var(--link-hover-color) !important;
+  }
+  border-bottom: 1px solid var(--link-hover-color);
+  text-decoration: none;
+}
+
+%link-color {
+  color: var(--link-color);
+}
+
+%link-underline:not(.remove-color) {
+  border-bottom: 1px solid var(--link-underline-color);
+}
+
+%no-bottom-border {
+  border-bottom: none;
+}
+
+%heading {
+  font-weight: 400;
+  font-family: 'Lato', 'Microsoft Yahei', sans-serif;
+}
+
+%section {
+  #post-wrapper & {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
+%anchor {
+  padding-top: 3.5rem;
+  margin-top: -2.5rem;
+}
+
+/*---------- scss mixin ---------*/
+
+@mixin no-text-decoration {
+  text-decoration: none;
+}
+
+@mixin sidebar-links($color: rgba(255, 255, 255, 0.5)) {
+  color: $color;
+  transition: color 0.35s ease-in-out;
+  user-select: none;
+  margin: 0 .25rem;
+}
+
+@mixin icon-round($diameter) {
+  border: 1px solid;
+  border-radius: 50%;
+  width: $diameter;
+  height: $diameter;
+}
+
+@mixin ml-mr($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin pl-pr($val) {
+  padding-left: $val;
+  padding-right: $val;
+}
+
+@mixin input-placeholder {
+  opacity: 0.6;
+}
+
+@mixin semi-bold {
+  font-weight: 600;
+}
+
+@mixin label($font-size: 1rem, $font-weight: 600, $color: var(--label-color)) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Roboto Condensed', 'Microsoft Yahei', sans-serif;
+}
+
+/* OneSignal if it has */
+.onesignal-bell-launcher-md {
+  bottom: 56px !important;
+}
+
+.onesignal-bell-launcher-sm {
+  bottom: 64px !important;
+}

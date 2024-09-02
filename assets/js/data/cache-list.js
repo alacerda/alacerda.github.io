@@ -52,11 +52,11 @@ const include = [
     {% endif %}
   {% endfor %}
 
-  // {% include update-list.html %}
-  // {% for item in update_list %}
-  //   {% assign url = item | split: "::" | last | prepend: "/posts/" | append: "/" %}
-  //   {% assign post_list = post_list | push: url %}
-  // {% endfor %}
+  {% include update-list.html %}
+  {% for item in update_list %}
+    {% assign url = item | split: "::" | last | prepend: "/posts/" | append: "/" %}
+    {% assign post_list = post_list | push: url %}
+  {% endfor %}
 
   {% assign post_list = post_list | uniq %}
 
