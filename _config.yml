@@ -26,7 +26,7 @@ social:
   links:                                                      # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/alancordeiro/
     - https://github.com/alacerda
-    
+
 
 #--------------------------
 
@@ -192,6 +192,10 @@ plugins:
   - jekyll-pwa-plugin
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - sass
+
+sass:
+  style: compressed
 
 pwa:
   enabled: true # Optional
