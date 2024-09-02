@@ -193,9 +193,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
 
-sass:
-  style: compressed
-
 pwa:
   enabled: true # Optional
 #  sw_src_filepath: service-worker.js # Optional
