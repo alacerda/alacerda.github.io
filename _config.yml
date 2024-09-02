@@ -192,7 +192,9 @@ plugins:
   - jekyll-pwa-plugin
   - jekyll-redirect-from
   - jekyll-seo-tag
-  - sass
+
+sass:
+  style: compressed
 
 sass:
   style: compressed
