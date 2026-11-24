@@ -1,5 +1,3 @@
 User-agent: *
 
-Disallow: /norobots/
-
 Sitemap: https://alacerda.github.io/sitemap.xml
